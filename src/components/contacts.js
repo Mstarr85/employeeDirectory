@@ -1,5 +1,6 @@
 import React from 'react'
 
+
     const Contacts = ({ contacts }) => {
       console.log()
       return (
@@ -22,4 +23,4 @@ import React from 'react'
       )
     };
 
-    export default Contacts
+    export default Contacts;
