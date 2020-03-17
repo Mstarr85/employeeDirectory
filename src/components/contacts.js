@@ -5,7 +5,7 @@ import React from 'react'
       console.log()
       return (
         <div>
-          <center><h1>Contact List</h1></center>
+          <center><h1>Employee List</h1></center>
           {contacts.map((contact) => (
             <div className="card">
               <div className="card-body">
