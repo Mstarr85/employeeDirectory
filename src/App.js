@@ -7,36 +7,34 @@ class App extends Component {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(res => res.json())
         .then((data) => {
-          this.setState({ contacts: data })
+          this.setState({ contacts: data, filteredContacts: data })
     })
     .catch(console.log)
   }
   state = {
     contacts: [],
+    filteredContacts: [],
     searchEmployee: ''
   }
 
    
   // };
-  handleInput = (e) => {
+  handleInput(e) {
     console.log(e.target.value);
-    this.setState({ searchEmployee: e.target.value })
+    let searchValue = e.target.value;
+    let filtered = this.state.contacts.filter((contact) => {
+      return contact.name.toLowerCase().indexOf(searchValue.toLowerCase()) !== -1;
+    })
+    this.setState({ filteredContacts: filtered})
     // this.setState({ contacts: e.target.value })
-
+    
    }
 
 
 
   render() {
-    const filteredContacts = this.state.contacts.filter((contact) => {
-      // this.state.contacts.filter((contact) => {
 
-    
-      return contact.name.toLowerCase().includes(this.state.searchEmployee.toLowerCase())
-      // return contact.name.toLowerCase().includes(this.contacts.toLowerCase())
-
-    })
-    
+   
 
     return (
         <div className="App">
@@ -44,9 +42,9 @@ class App extends Component {
           
           <h1>Employee Search</h1>
 
-      <SearchBox handleInput={this.handleInput}/>
+      <SearchBox handleInput={this.handleInput.bind(this)}/>
       {/* <SearchBox search={this.state.searchEmployee.handleInput}/> */}
-      <Contacts contacts={this.state.contacts} />
+      <Contacts contacts={this.state.filteredContacts} />
    
       </div>
       </div>
