@@ -1,3 +1,4 @@
+<img width="1130" alt="Screen Shot 2020-03-21 at 1 32 49 AM 3" src="https://user-images.githubusercontent.com/53281244/77220180-f9ef9480-6b13-11ea-9854-acc5e1e99fbe.png">
 # EmployeeDirectory
 - User can look up employee by name quickly by typing name in search box making it easier for employers to sort through employees
 
