@@ -20,7 +20,7 @@
  
                             or
 
- *  Click on the Heroku Deployed Link provided
+ *  Click on the Heroku Deployed Link provided below
 
 ## How It Works
 
